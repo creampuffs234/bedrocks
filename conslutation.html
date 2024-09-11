@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/consultation.css">
+    <link rel="stylesheet" href="styles/H&F.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-logo">
+            <a href="index.html">
+                <img src="svg/BEDROCKS__1_-removebg-preview.svg" height="150px" width="400px">
+            </a>    
+        </div>
+         
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Aboutus.html">About us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="Doctors.html">Doctors</a></li>
+                <li><a href="conslutation.html">Consultation</a></li>
+                <li><a href="pharmacy.html">pharmacy</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Consultation Reservation Form</h1>
+        <form action="#" method="post" class="reservation-form">
+            <!-- Personal Information Section -->
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for="full-name">Full Name:</label>
+                <input type="text" id="full-name" name="full-name" required>
+
+                <label for="dob">Date of Birth:</label>
+                <select id="dob-day" name="dob-day">
+                    <option value="">Day</option>
+                    <!-- Add options for day -->
+                </select>
+                <select id="dob-month" name="dob-month">
+                    <option value="">Month</option>
+                    <!-- Add options for month -->
+                </select>
+                <select id="dob-year" name="dob-year">
+                    <option value="">Year</option>
+                    <!-- Add options for year -->
+                </select>
+
+                <label>Gender:</label>
+                <label><input type="radio" name="gender" value="male"> Male</label>
+                <label><input type="radio" name="gender" value="female"> Female</label>
+                <label><input type="radio" name="gender" value="other"> Other</label>
+
+                <label for="contact-number">Contact Number:</label>
+                <input type="tel" id="contact-number" name="contact-number" required>
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="address">Home Address:</label>
+                <input type="text" id="address" name="address" required>
+            </fieldset>
+
+            <!-- Appointment Information Section -->
+            <fieldset>
+                <legend>Appointment Information</legend>
+                <label for="doctor">Select Doctor:</label>
+                <select id="doctor" name="doctor">
+                    <option value="">Select Doctor</option>
+                    <!-- Add doctor options -->
+                </select>
+
+                <label for="reason">Reason for Visit:</label>
+                <select id="reason" name="reason">
+                    <option value="">Select Reason</option>
+                    <!-- Add reason options -->
+                </select>
+
+                <label for="appointment-date">Date of Appointment:</label>
+                <input type="date" id="appointment-date" name="appointment-date" required>
+
+                <label for="appointment-time">Preferred Time:</label>
+                <input type="time" id="appointment-time" name="appointment-time" required>
+            </fieldset>
+
+            <!-- Medical History Section -->
+            <fieldset>
+                <legend>Medical History</legend>
+                <label for="conditions">Existing Medical Conditions:</label>
+                <textarea id="conditions" name="conditions"></textarea>
+
+                <label for="medications">Current Medications:</label>
+                <textarea id="medications" name="medications"></textarea>
+
+                <label for="allergies">Previous Allergies:</label>
+                <textarea id="allergies" name="allergies"></textarea>
+
+                <label for="family-history">Family Medical History:</label>
+                <textarea id="family-history" name="family-history"></textarea>
+
+                <label>Do you have any allergies?</label>
+                <label><input type="radio" name="allergy" value="yes"> Yes</label>
+                <label><input type="radio" name="allergy" value="no"> No</label>
+            </fieldset>
+
+            <!-- Payment Information Section -->
+            <fieldset>
+                <legend>Payment Information</legend>
+                <label for="insurance-provider">Insurance Provider:</label>
+                <input type="text" id="insurance-provider" name="insurance-provider">
+
+                <label for="policy-number">Insurance Policy Number:</label>
+                <input type="text" id="policy-number" name="policy-number">
+
+                <label for="payment-method">Preferred Payment Method:</label>
+                <input type="text" id="payment-method" name="payment-method">
+
+                <label for="card-info">Card Information:</label>
+                <input type="text" id="card-info" name="card-info">
+
+                <label for="special-note">Special Note:</label>
+                <textarea id="special-note" name="special-note"></textarea>
+
+                <label><input type="checkbox" name="policy-agreement" required> I agree to the terms and conditions</label>
+            </fieldset>
+
+            <!-- Form Buttons -->
+            <div class="form-buttons">
+                <button type="reset">Reset</button>
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </main>
+    
+    <footer>
+        <div class="footer-container">
+            <div class="col">
+                <img src="svg/BEDROCKS__1_-removebg-preview.svg" class="footer-logo">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+            </div>
+            <div class="col">
+                <h4>Office <div class="underline"><span></span></div> </h4>
+                <p>Uhisdn Fdfdsc</p>
+                <p>Hdshbcds Dscdsc</p>
+                <p>Bhdsbdcd Cscs</p>
+                <p class="email-id">example@domain.com</p>
+                <h5>0777 777 7777</h5>
+            </div>
+            <div class="col links">
+                <h4>Links <div class="underline"><span></span></div> </h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Doctors</a></li>
+                    <li><a href="#">Consultation</a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <h4>Newsletter <div class="underline"><span></span></div> </h4>
+                <form>
+                    
+                    <input type="email" placeholder="Enter your email id" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+                <div class="social-icons">
+                    <img src="svg/linkedin-in-brands-solid.svg" alt="linkedin" width="32px">
+                    <img src="svg/instagram-brands-solid.svg" alt="linkedin" width="32px">
+                    <img src="svg/facebook-brands-solid.svg" alt="linkedin" width="32px">
+                    <img src="svg/x-twitter-brands-solid.svg" alt="linkedin" width="32px">
+                </div>
+            </div>
+        </div>
+        <hr> 
+        <p class="copywrite">Bed Rocks hospitals.int</p>
+    </footer>
+</body>
+</html>

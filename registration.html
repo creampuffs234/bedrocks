@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/registration.css">
+    <link rel="stylesheet" href="styles/H&F.css">
+</head>
+<body>
+    <header>
+        <header>
+            <div class="header-logo">
+                <a href="index.html">
+                    <img src="svg/BEDROCKS__1_-removebg-preview.svg" height="150px" width="400px">
+                </a>    
+            </div>
+             
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Aboutus.html">About us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="Doctors.html">Doctors</a></li>
+                    <li><a href="conslutation.html">Consultation</a></li>
+                    <li><a href="pharmacy.html">pharmacy</a></li>
+                </ul>
+            </nav>
+        </header>
+    </header>
+    <main>
+        <section class="form-container">
+            <h1>Register</h1>
+            <form id="registration-form">
+                <!-- Full Name -->
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname" required>
+
+                <!-- Email Address -->
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+
+                <!-- Phone Number and Date of Birth -->
+                <div class="row">
+                    <div class="col">
+                        <label for="phone">Phone Number:</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="col">
+                        <label for="dob">Date of Birth:</label>
+                        <input type="date" id="dob" name="dob" required>
+                    </div>
+                </div>
+
+                <!-- Gender -->
+                <fieldset>
+                    <legend>Gender:</legend>
+                    <label><input type="radio" name="gender" value="male"> Male</label>
+                    <label><input type="radio" name="gender" value="female"> Female</label>
+                    <label><input type="radio" name="gender" value="other"> Other</label>
+                </fieldset>
+
+                <!-- Home Address -->
+                <label for="address">Home Address:</label>
+                <input type="text" id="address" name="address" required>
+
+                <!-- Password and Confirm Password -->
+                <div class="row">
+                    <div class="col">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <div class="col">
+                        <label for="confirm_password">Confirm Password:</label>
+                        <input type="password" id="confirm_password" name="confirm_password" required>
+                    </div>
+                </div>
+
+                <!-- Submit and Clear Buttons -->
+                <div class="button-row">
+                    <button type="reset">Clear</button>
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </section>
+    </main>
+        
+    <footer>
+        <div class="footer-container">
+            <div class="col">
+                <img src="svg/BEDROCKS__1_-removebg-preview.svg" class="footer-logo">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+            </div>
+            <div class="col">
+                <h4>Office <div class="underline"><span></span></div> </h4>
+                <p>Uhisdn Fdfdsc</p>
+                <p>Hdshbcds Dscdsc</p>
+                <p>Bhdsbdcd Cscs</p>
+                <p class="email-id">example@domain.com</p>
+                <h5>0777 777 7777</h5>
+            </div>
+            <div class="col links">
+                <h4>Links <div class="underline"><span></span></div> </h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Doctors</a></li>
+                    <li><a href="#">Consultation</a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <h4>Newsletter <div class="underline"><span></span></div> </h4>
+                <form>
+                    
+                    <input type="email" placeholder="Enter your email id" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+                <div class="social-icons">
+                    <img src="svg/linkedin-in-brands-solid.svg" alt="linkedin" width="32px">
+                    <img src="svg/instagram-brands-solid.svg" alt="linkedin" width="32px">
+                    <img src="svg/facebook-brands-solid.svg" alt="linkedin" width="32px">
+                    <img src="svg/x-twitter-brands-solid.svg" alt="linkedin" width="32px">
+                </div>
+            </div>
+        </div>
+        <hr> 
+        <p class="copywrite">Bed Rocks hospitals.int</p>
+    </footer>
+    
+</body>
+</html>

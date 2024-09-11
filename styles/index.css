@@ -1,0 +1,143 @@
+
+body {
+    margin: 0;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Hero Section */
+.hero {
+    margin-top: 20px;
+    background-image: url('../images/mni-de-los-rios-stroke-awards-hero2.webp');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-text {
+    color: rgb(208, 193, 193);
+    font-size: 2.5rem;
+    font-weight: bold;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.484);
+    border-radius: 15px;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        height: 50vh;
+    }
+
+    .hero-text {
+        font-size: 1.8rem;
+        padding: 10px;
+    }
+}
+
+/* Container and Sections */
+.container {
+    padding: 20px;
+}
+
+.section-box {
+    display: flex;
+    align-items: flex-start; /* Align items to the start */
+    background-color: #0c468580;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    position: relative;
+}
+
+.section-box img {
+    max-width: 45%;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.section-box .text-content {
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.section-box h3 {
+    font-size: 1.6rem; /* Slightly larger font size */
+    margin-bottom: 15px; /* More space below the heading */
+    color: rgb(26, 39, 113);
+    font-weight: 600; /* Make the heading slightly bolder */
+}
+
+.section-box p {
+    font-size: 1.1rem; /* Slightly larger font size for better readability */
+    margin-bottom: 10px;
+    color: #333232;
+    line-height: 1.6; /* Increase line height for better readability */
+}
+
+.section-box ol, .section-box ul {
+    text-align: left;
+    margin: 10px 0;
+    color: #000000;
+    padding-left: 20px; /* Indent lists for better alignment */
+}
+
+.section-box button {
+    background-color: rgb(5, 92, 168);
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    align-self: flex-start; /* Align button to the start of the text content */
+}
+
+.section-box button:hover {
+    background-color: rgb(76, 136, 196);
+}
+
+/* Hover Effects */
+.section-box:hover {
+    background-color: rgb(62, 108, 173);
+    transform: translateY(-5px);
+}
+
+/* Alternating layout: Image on the right, text on the left */
+
+.text-content{
+    padding: 30px;
+    background-color: rgb(122, 224, 255);
+    border-radius: 30px;
+    margin: auto;
+    
+}
+.text-content:hover{
+    background-color: rgb(212, 217, 226);
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .section-box {
+        flex-direction: column;
+        text-align: center;
+        height: 750px;
+    }
+
+    .section-box img {
+        max-width: 100%;
+        margin: 0 0 20px 0;
+    }
+
+    .section-box .text-content {
+        max-width: 100%;
+    }
+
+}
