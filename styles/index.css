@@ -44,6 +44,7 @@ body {
 }
 
 .section-box {
+    height: auto;
     display: flex;
     align-items: flex-start; /* Align items to the start */
     background-color: #203a5680;
@@ -59,11 +60,11 @@ body {
 .section-box img {
     max-width: 45%;
     border-radius: 10px;
-    margin-right: 20px;
+    margin:auto;
 }
 
 .section-box .text-content {
-    
+    height: auto;
     max-width: 50%;
     display: flex;
     flex-direction: column;
@@ -139,6 +140,7 @@ body {
     }
 
     .section-box .text-content {
+        height: auto;
         max-width: 100%;
     }
 
