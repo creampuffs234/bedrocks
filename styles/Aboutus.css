@@ -1,82 +1,96 @@
-:root{
-    --boxcol:rgb(105, 212, 242);
+:root {
+    --primary-bg-color: #346cb4; 
+    --secondary-bg-color: #4fa6b1f6; 
+    --text-color-light: #333; 
+    --text-color-dark: #555; 
+    --table-header-bg-color: #1a2763; 
 }
+
 body {
     font-family: 'Poppins', sans-serif;
-    color: #333;
+    color: var(--text-color-light);
     margin: 0;
     padding: 0;
+    animation: fadeIn 1.5s ease-out; /* Body fade-in animation */
 }
 
 h1, h2 {
     text-align: center;
-    color: #000000;
-    background-color: #346cb4;
+    color: var(--text-color-light);
+    background-color: var(--primary-bg-color);
     border-radius: 40px;
     width: 80%;
     margin: auto;
+    animation: slideIn 1.5s ease-out; /* Header slide-in animtion */ /* Typo: "animtion" */
 }
 
-.textbox{
-    
+.textbox {
     background-color: rgb(255, 255, 255);
     padding: 20px;
     border-radius: 20px;
+    animation: fadeIn 1.5s ease-out; 
 }
 
-/* Branches Section */
+
 .branches {
     padding: 20px;
+    animation: fadeIn 1.5s ease-out; 
 }
 
 .branch {
     margin-top: 30px;
     display: flex;
     align-items: center;
-    background-color: #4fa6b1f6;
+    background-color: var(--secondary-bg-color);
     margin-bottom: 20px;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease; /* Branch hover effects */
+    animation: fadeInUp 1.5s ease-out; /* Branch fade-in up animation */
 }
 
 .branch img {
     width: 40%;
     border-radius: 10px;
     margin-right: 20px;
-    box-shadow: 4px 4px 4px black;
+    box-shadow: 4px 4px 4px black; 
+    transition: transform 0.3s ease; 
 }
 
 .branch-info {
     max-width: 55%;
-    margin-left: 225px;
+    margin-left: 225px; /* This margin might not always fit well */
 }
 
 .branch h3 {
     margin: 0;
-    color: #1a2763;
+    color: var(--text-color-light);
+    animation: fadeIn 1.5s ease-out; /* Header fade-in animation */
 }
 
 .branch p {
-    color: #555;
+    color: var(--text-color-dark);
+    animation: fadeIn 1.5s ease-out; /* Paragraph fade-in animation */
 }
-
-/* Reversed layout for alternate sections */
-
 
 /* Hover effect */
 .branch:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    background-color: var(--boxcol);
+    background-color: var(--primary-bg-color);
+}
+
+.branch img:hover {
+    transform: scale(1.05); /* Image hover animation */
 }
 
 /* Summary Table Section */
 .summary-table {
     padding: 20px;
     text-align: center;
-    background-color: #b4babb;
+    background-color: #b4babb; 
+    animation: fadeIn 1.5s ease-out; /* Summary table fade-in animation */
 }
 
 table {
@@ -84,21 +98,23 @@ table {
     border-collapse: collapse;
     margin: 20px 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1.5s ease-out; /* Table fade-in animation */
 }
 
 th, td {
     padding: 15px;
     text-align: left;
     border-bottom: 1px solid #ddd;
+    animation: fadeIn 1.2s ease-out; 
 }
 
 th {
-    background-color: #1a2763;
+    background-color: var(--table-header-bg-color);
     color: white;
 }
 
 tfoot {
-    background-color: #e0f7fa;
+    background-color: #e0f7fa; 
     font-style: italic;
     text-align: center;
 }
@@ -107,7 +123,6 @@ tfoot td {
     padding: 10px;
     border-top: 1px solid #ddd;
 }
-
 
 /* Mobile Friendly Styles */
 @media (max-width: 768px) {
@@ -129,5 +144,36 @@ tfoot td {
     table, th, td {
         font-size: 0.9rem;
     }
+}
 
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }

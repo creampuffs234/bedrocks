@@ -1,21 +1,31 @@
+:root {
+    --background-color: #41414a; 
+    --doctor-box-bg-color: #080808; 
+    --doctor-box-hover-shadow: rgb(181, 169, 169); 
+    --doctor-info-header-color: #0044cc; 
+    --doctor-info-text-color: #ffffff; 
+    --box-shadow-color: rgba(0, 0, 0, 0.1); 
+}
+
 body {
-    
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    background-color: #41414a;
+    background-color: var(--background-color);
     color: #333;
+    animation: fadeIn 1.5s ease-out; /* Body fade-in animtion */
 }
 
 main {
     padding: 20px;
+    animation: fadeInUp 1.5s ease-out; /* Main content fade-in up animtion */
 }
 
 /* Doctors Container */
 .doctors-container {
-    
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 columns on desktop */
     gap: 30px;
+    animation: fadeIn 1.5s ease-out; 
 }
 
 /* Doctor Box Styles */
@@ -23,17 +33,17 @@ main {
     margin-left: 60px;
     width: 75%;
     height: auto;
-    background-color: #ffffff;
+    background-color: var(--doctor-box-bg-color);
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px var(--box-shadow-color);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 1.5s ease-out; 
 }
 
 .doctor-box img {
-
     width: 100%;
-    height: 400px; /* Adjust image height */
+    height: 400px; 
     object-fit: cover;
     transition: transform 0.3s ease;
 }
@@ -45,47 +55,69 @@ main {
 .doctor-info {
     padding: 20px;
     text-align: center;
+    animation: fadeIn 1.2s ease-out; /* Text content fade-in animtion */ 
 }
 
 .doctor-info h3 {
     margin: 10px 0;
-    color: #0044cc;
+    color: var(--doctor-info-header-color);
+    animation: fadeIn 1.2s ease-out; /* Header fade-in animation */
 }
 
 .doctor-info p {
     margin: 5px 0;
-    color: #666;
+    color: var(--doctor-info-text-color);
+    animation: fadeIn 1.2s ease-out; /* Paragraph fade-in animation */
 }
 
 .doctor-box:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgb(181, 169, 169);
+    box-shadow: 0 8px 16px var(--doctor-box-hover-shadow); 
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
     .doctors-container {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
-        
+        grid-template-columns: repeat(2, 1fr); 
     }
 
     .doctor-box {
         margin-left: 20px;
         width: 85%;
         height: auto;
-        background-color: #ffffff;
+        background-color: var(--doctor-box-bg-color);
         border-radius: 10px;
         overflow: hidden;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 4px 8px var(--box-shadow-color);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
-        justify-content: space-between;
+        justify-content: space-between; 
     }
 
     .doctor-box img {
-
         width: 100%;
         height: auto; /* Adjust image height */
         object-fit: cover;
         transition: transform 0.3s ease;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }

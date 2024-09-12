@@ -1,55 +1,71 @@
-/* General Styles */
+:root {
+    --primary-bg-color: #6a93cd; 
+    --button-primary-bg-color: #007bff; 
+    --button-reset-bg-color: #dc3545; 
+    --border-color: #ddd; 
+    --text-color-light: #333; 
+    --border-input-color: #ccc; 
+}
+
 body {
     font-family: 'Poppins', sans-serif;
-    color: #333;
+    color: var(--text-color-light);
     margin: 0;
     padding: 0;
+    animation: fadeIn 1.5s ease-out; /* Body fade-in animation */
 }
 
 main {
     max-width: 800px;
     margin: 50px auto;
-    background-color: #6a93cd;
+    background-color: var(--primary-bg-color);
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1.5s ease-out; /* Main container fade-in up animation */
 }
 
 h1 {
     text-align: center;
     margin-bottom: 30px;
+    animation: slideIn 1.5s ease-out;   /* Header slide-in animtion */ 
 }
 
 form {
     display: flex;
     flex-direction: column;
+    animation: fadeIn 1.5s ease-out; /* Form fade-in animation */
 }
 
 fieldset {
-    border: 1px solid #ddd;
+    border: 1px solid var(--border-color);
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 8px;
+    animation: fadeInUp 1.5s ease-out; 
 }
 
 legend {
     font-size: 1.2rem;
     font-weight: bold;
     padding: 0 10px;
+    animation: fadeIn 1.2s ease-out;
 }
 
 label {
     display: block;
     margin: 10px 0 5px;
+    animation: fadeIn 1.2s ease-out; 
 }
 
 input, select, textarea {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--border-input-color);
     border-radius: 5px;
     margin-bottom: 15px;
     box-sizing: border-box;
+    animation: fadeIn 1.5s ease-out; /* Input fade-in animation */
 }
 
 input[type="radio"], input[type="checkbox"] {
@@ -64,22 +80,25 @@ textarea {
 .form-buttons {
     display: flex;
     justify-content: space-between;
+    animation: fadeInUp 1.5s ease-out;
 }
 
 button {
-    background-color: #007bff;
+    background-color: var(--button-primary-bg-color);
     color: white;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: transform 0.3s ease; 
 }
 
 button[type="reset"] {
-    background-color: #dc3545;
+    background-color: var(--button-reset-bg-color);
 }
 
 button:hover {
+    transform: scale(1.05); /* Button hver animtion */
     opacity: 0.9;
 }
 
@@ -97,5 +116,37 @@ button:hover {
     button {
         width: 100%;
         margin-bottom: 10px;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
     }
 }

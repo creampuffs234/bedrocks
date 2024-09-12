@@ -1,32 +1,44 @@
 /* General form styling */
+:root{ 
+    --primary-bg-color: #6a93cd; 
+    --shadow:rgba(0, 0, 0, 0.1);
+    --border-color: #ccc; 
+    --button-bg-color: #007bff; 
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    animation: fadeIn 1.5s ease-out; /* Body fade-in animation */
 }
 
 main {
     width: 50%;
     margin: 50px auto;
-    background-color: #fff;
+    background-color:var(--primary-bg-color); 
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px var(--shadow); 
+    animation: fadeInUp 1.5s ease-out; /* Main container fade-in up animation */
 }
 
 h1 {
     text-align: center;
     color: #333;
+    animation: slideDown 1.5s ease-out; /* Header slide-down animation */
 }
 
 form {
     display: flex;
     flex-direction: column;
+    animation: fadeIn 1.5s ease-out; /* Form fade-in animation */
 }
 
 label {
     margin: 10px 0 5px;
     font-weight: bold;
+    animation: fadeIn 1.2s ease-out; 
 }
 
 input[type="text"],
@@ -34,8 +46,15 @@ input[type="tel"],
 select {
     padding: 8px;
     margin-bottom: 15px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--border-color); 
     border-radius: 4px;
+    transition: border-color 0.3s ease; 
+}
+
+input[type="text"]:hover,
+input[type="tel"]:hover,
+select:hover {
+    border-color: var(--button-bg-color); 
 }
 
 input[type="radio"] {
@@ -45,17 +64,19 @@ input[type="radio"] {
 p {
     margin: 10px 0 5px;
     font-weight: bold;
+    animation: fadeIn 1.2s ease-out; /* Paragraph fade-in animation */
 }
 
 button {
     padding: 10px;
     margin: 10px 0;
-    background-color: #007bff;
+    background-color: var(--button-bg-color); 
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease; 
 }
 
 button[type="reset"] {
@@ -64,11 +85,44 @@ button[type="reset"] {
 
 button:hover {
     opacity: 0.9;
+    transform: scale(1.05); /* Button hover animation */
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
     main {
         width: 90%;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }

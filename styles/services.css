@@ -3,6 +3,7 @@ body {
     margin: 0;
     font-family: 'Arial', sans-serif;
     color: #333;
+    animation: fadeIn 1.5s ease-out; /* Body fade-in animation */
 }
 
 /* Intro Section */
@@ -10,13 +11,15 @@ body {
     margin-top: 30px;
     text-align: center;
     padding: 40px 20px;
-    background-color: #007bff;
+    background-color: #3d6fa4;
     color: white;
+    animation: fadeInUp 1.5s ease-out; /* Intro section fade-in up animation */
 }
 
 .intro h1 {
     font-size: 3rem;
     margin-bottom: 15px;
+    animation: fadeIn 1.2s ease-out; /* Heading fade-in animation */
 }
 
 .intro p {
@@ -35,7 +38,7 @@ body {
 }
 
 .service-box {
-    background-color: white;
+    background-color: rgb(34, 29, 29);
     border-radius: 10px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -45,11 +48,13 @@ body {
     align-items: center;
     gap: 30px;
     padding: 30px;
+    animation: fadeInUp 1s ease-out; /* Service box fade-in up animation */
 }
 
 .service-box img {
     max-width: 200px; /* Increased image size */
     border-radius: 10px;
+    transition: transform 0.3s ease;
 }
 
 .service-details {
@@ -64,12 +69,17 @@ body {
 
 .service-box p {
     font-size: 1.2rem;
-    color: #555;
+    color: #ece8e8;
 }
 
 .service-box:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    animation: hoverShadow 0.3s ease; /* Service box hover shadow animation */
+}
+
+.service-box:hover img {
+    transform: scale(1.05); /* Slight zoom on hover */
 }
 
 /* Registration Link */
@@ -85,11 +95,13 @@ body {
     color: white;
     text-decoration: none;
     border-radius: 8px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    animation: fadeInUp 1.5s ease-out; /* Register link fade-in up animation */
 }
 
 .register-link:hover {
     background-color: #0056b3;
+    transform: scale(1.05); /* Slight scale effect on hover */
 }
 
 /* Responsive Design */
@@ -110,5 +122,35 @@ body {
 
     .service-details {
         max-width: 100%;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes hoverShadow {
+    from {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    }
+    to {
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     }
 }
