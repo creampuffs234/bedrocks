@@ -1,0 +1,42 @@
+{
+  "analgesics": [
+      { "id": 1, "name": "Paracetamol", "price": 5, "image": "imagescopy/download.jpg" },
+      { "id": 2, "name": "Ibuprofen", "price": 7 , "image": "imagescopy/download.jpg"},
+      { "id": 3, "name": "Aspirin", "price": 4 , "image": "imagescopy/p.jpg"},
+      { "id": 4, "name": "Naproxen", "price": 6 , "image": "imagescopy/p.jpg"},
+      { "id": 5, "name": "Diclofenac", "price": 8 , "image": "imagescopy/p.jpg"},
+      { "id": 6, "name": "Celecoxib", "price": 10 , "image": "imagescopy/51i9HkGBUkL._AC_UF1000,1000_QL80_.jpg"}
+  ],
+  "antibiotics": [
+      { "id": 3, "name": "Amoxicillin", "price": 8 , "image": "imagescopy/p.jpg"},
+      { "id": 4, "name": "Ciprofloxacin", "price": 9 , "image": "imagescopy/p.jpg"},
+      { "id": 5, "name": "Azithromycin", "price": 12 , "image": "imagescopy/p.jpg"},
+      { "id": 6, "name": "Doxycycline", "price": 11 , "image": "imagescopy/p.jpg"},
+      { "id": 7, "name": "Clindamycin", "price": 15 , "image": "imagescopy/p.jpg"},
+      { "id": 8, "name": "Cephalexin", "price": 13, "image": "imagescopy/p.jpg" }
+  ],
+  "antidepressants": [
+      { "id": 5, "name": "Fluoxetine", "price": 10 , "image": "imagescopy/Fluoxetine.jpg"},
+      { "id": 6, "name": "Sertraline", "price": 9, "image": "imagescopy/p.jpg" },
+      { "id": 7, "name": "Escitalopram", "price": 12 , "image": "imagescopy/p.jpg"},
+      { "id": 8, "name": "Paroxetine", "price": 14 , "image": "imagescopy/p.jpg"},
+      { "id": 9, "name": "Venlafaxine", "price": 13 , "image": "imagescopy/p.jpg"},
+      { "id": 10, "name": "Duloxetine", "price": 15 , "image": "imagescopy/p.jpg"}
+  ],
+  "antihistamines": [
+      { "id": 7, "name": "Diphenhydramine", "price": 4 , "images": "imagescopy/71yXGf8brsL.jpg"},
+      { "id": 8, "name": "Loratadine", "price": 6 , "image": "imagescopy/p.jpg"},
+      { "id": 9, "name": "Cetirizine", "price": 5 , "image": "imagescopy/p.jpg"},
+      { "id": 10, "name": "Fexofenadine", "price": 7 , "image": "imagescopy/p.jpg"},
+      { "id": 11, "name": "Desloratadine", "price": 8 , "image": "imagescopy/p.jpg"},
+      { "id": 12, "name": "Chlorpheniramine", "price": 3 , "image": "imagescopy/p.jpg"}
+  ],
+  "antihypertensives": [
+      { "id": 9, "name": "Amlodipine", "price": 5 , "image": "imagescopy/71yXGf8brsL.jpg"},
+      { "id": 10, "name": "Losartan", "price": 8 , "image": "imagescopy/p.jpg"},
+      { "id": 11, "name": "Lisinopril", "price": 6 , "image": "imagescopy/p.jpg"},
+      { "id": 12, "name": "Enalapril", "price": 7 , "image": "imagescopy/p.jpg"},
+      { "id": 13, "name": "Metoprolol", "price": 9 , "image": "imagescopy/p.jpg"},
+      { "id": 14, "name": "Hydrochlorothiazide", "price": 4 , "image": "imagescopy/p.jpg"}
+  ]
+}

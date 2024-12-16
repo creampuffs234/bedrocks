@@ -1,0 +1,105 @@
+body {
+  
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  line-height: 1.6;
+}
+
+main {
+  background-color: #5e7062;
+  padding: 20px;
+}
+
+#medicine-sections {
+  display: grid;                   /* Use grid instead of flex */
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));  /* Automatically adjust number of columns based on screen size */
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.medicine-section {
+  background-color: #0a5c70;
+  border: 2px solid #000000;
+  border-radius: 7px;
+  padding: 10px;
+  box-shadow: 2px 9px 8px rgba(0, 0, 0, 0.1);
+}
+
+.medicine-card {
+  padding: 10px;
+  border: 1px solid #000000;
+  margin-bottom: 10px;
+  text-align: center;
+  background: #29749a;
+  border-radius: 8px;
+}
+
+.medicine-card button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.medicine-card button:hover {
+  background-color: #218838;
+}
+
+#cart-table {
+  background-color: #59a8cf;
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+#cart-table th,
+#cart-table td {
+  border: 3px solid #282352;
+  padding: 8px;
+  text-align: center;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.medicine-section img {
+  width: 100%;            /* Make the image responsive */
+  max-width: 150px;       /* Limit the maximum width */
+  height: auto;           /* Maintain aspect ratio */
+  margin-bottom: 10px;
+}
+
+#save-favorites {
+  padding: 10px;
+  border: 5px;
+  background-color: #47e35e;
+  height: 40px;
+  border-radius: 30px;
+  order: 1px solid #000000;
+}
+
+#apply-favorites {
+  padding: 10px;
+  border: 5px;
+  background-color: #47e35e;
+  height: 40px;
+  border-radius: 30px;
+  order: 1px solid #000000;
+}
+
+#save-favorites:hover{
+transition: 0.5s;
+background-color: rgb(10, 67, 19);
+
+}
+
+#apply-favorites:hover{
+  transition: 0.5s;
+  background-color: rgb(10, 67, 19);
+  
+  
+  }
